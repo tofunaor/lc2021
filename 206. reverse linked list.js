@@ -1,6 +1,4 @@
-// ?
-
-// two pointer
+// two pointers
 var reverseList = function (head) {
   if (!head || !head.next) return head;
   let temp = null,
@@ -28,7 +26,7 @@ var reverseList = function (head) {
   return reverse(null, head);
 };
 
-// recursion - back to front
+// recursion ??
 var reverse = function (head) {
   if (!head || !head.next) return head;
   const pre = reverse(head.next);
@@ -39,9 +37,7 @@ var reverse = function (head) {
 
 var reverseList = function (head) {
   let cur = head;
-  while (cur && cur.next) {
-    cur = cur.next;
-  }
+  while (cur && cur.next) cur = cur.next;
   reverse(head);
   return cur;
 };
